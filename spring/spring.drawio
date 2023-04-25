@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-04-25T10:55:01.458Z" agent="Test" etag="jworGwNJSipUa-j91TpC" version="21.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-25T14:20:37.825Z" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36" etag="AT5Xwf8qEhQBSXtGkb2c" version="21.2.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1434" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="922" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -45,14 +45,112 @@
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-12" value="Replace Bulb" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="320" y="310" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ttMFiYH-_PNSuwCw0Hvd-2" value="&lt;pre style=&quot;border-color: var(--border-color); font-weight: 400; text-align: left; background-color: rgb(43, 43, 43); font-family: &amp;quot;M+ 1mn&amp;quot;, monospace; font-size: 12pt;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color);&quot; color=&quot;#ffff99&quot;&gt;@SpringBootApplication&lt;/font&gt;&lt;/pre&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ttMFiYH-_PNSuwCw0Hvd-2" value="&lt;pre style=&quot;border-color: var(--border-color); font-weight: 400; text-align: left; background-color: rgb(43, 43, 43); font-family: &amp;quot;M+ 1mn&amp;quot;, monospace; font-size: 12pt;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color);&quot; color=&quot;#ffff99&quot;&gt;@SpringBootApplication&lt;/font&gt;&lt;/pre&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="40" y="520" width="297.5" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="ttMFiYH-_PNSuwCw0Hvd-4" value="&lt;pre style=&quot;font-family: &amp;quot;M+ 1mn&amp;quot;, monospace; font-size: 12pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(0, 0, 0);&quot;&gt;&lt;font color=&quot;#ffff99&quot;&gt;@EnableAutoConfiguration&lt;/font&gt;&lt;/span&gt;&lt;/pre&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="ttMFiYH-_PNSuwCw0Hvd-2">
+        <mxCell id="ttMFiYH-_PNSuwCw0Hvd-4" value="&lt;pre style=&quot;font-family: &amp;quot;M+ 1mn&amp;quot;, monospace; font-size: 12pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(0, 0, 0);&quot;&gt;&lt;font color=&quot;#ffff99&quot;&gt;@EnableAutoConfiguration&lt;/font&gt;&lt;/span&gt;&lt;/pre&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="ttMFiYH-_PNSuwCw0Hvd-2" vertex="1">
           <mxGeometry x="27.5" y="30" width="270" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="ttMFiYH-_PNSuwCw0Hvd-6" value="@Import&lt;br&gt;(AutoConfigurationImportSelector.class)" style="whiteSpace=wrap;html=1;" vertex="1" parent="ttMFiYH-_PNSuwCw0Hvd-4">
+        <mxCell id="ttMFiYH-_PNSuwCw0Hvd-6" value="@Import&lt;br&gt;(AutoConfigurationImportSelector.class)" style="whiteSpace=wrap;html=1;" parent="ttMFiYH-_PNSuwCw0Hvd-4" vertex="1">
           <mxGeometry x="21.25" y="35" width="227.5" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-0" value="SpringApplication" style="swimlane;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="800" width="460" height="2250" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-11" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="6" y="50" width="444" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-1" value="// 根据加载的class推断当前web容器类型 SERVLET or REACTIVE&lt;br&gt;this.webApplicationType =&amp;nbsp;WebApplicationType.deduceFromClasspath()" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="23" y="90" width="410" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-6" value="this.listeners = [implements of&amp;nbsp;ApplicationListener]" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="21" y="260" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-2" value="this.initializers = [implements class of ApplicationContextInitializer]" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="21" y="180" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-12" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;SpringApplication构造器方法&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="21" y="50" width="199" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-13" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="10" y="369" width="440" height="1511" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-14" value="run()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="22" y="380" width="139" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-15" value="// 新建计时器&lt;br&gt;StopWatch stopWatch = new StopWatch();" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="21" y="400" width="409" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-16" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;SpringApplicationRunListeners listeners = [implements of&amp;nbsp;SpringApplicationRunListener]&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;listeners.starting(); //传播SpringApplication starting 状态&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="21" y="490" width="409" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-22" value="&lt;div style=&quot;text-align: left;&quot;&gt;// parse 传入的 args --option=value&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;ApplicationArguments applicationArguments = new DefaultApplicationArguments(args);&amp;nbsp;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="21" y="580" width="409" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-23" value="&lt;div style=&quot;text-align: left;&quot;&gt;//创建Enviroment 将args中的kv也放到enviroment&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;ConfigurableEnvironment environment = prepareEnvironment(listeners, applicationArguments);&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="24" y="650" width="409" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-24" value="&lt;div style=&quot;&quot;&gt;// 打印Springboot Banner和imageBanner&lt;/div&gt;&lt;div style=&quot;&quot;&gt;//spring.banner.location 默认 banner.txt&lt;/div&gt;&lt;div style=&quot;&quot;&gt;//spring.banner.image.location 默认 banner.jpg|gif|png&lt;/div&gt;&lt;div style=&quot;&quot;&gt;Banner printedBanner = printBanner(environment);&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="22" y="720" width="409" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-25" value="&lt;div style=&quot;&quot;&gt;// SERVLET :&amp;nbsp;AnnotationConfigServletWebServerApplicationContext&lt;/div&gt;&lt;div style=&quot;&quot;&gt;// REACTIVE:&amp;nbsp;AnnotationConfigReactiveWebServerApplicationContext&lt;/div&gt;&lt;div style=&quot;&quot;&gt;context = createApplicationContext()&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="24" y="790" width="409" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-26" value="&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="23.5" y="880" width="406.5" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-27" value="&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;prepareContext(context, environment, listeners, applicationArguments, printedBanner);&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="24" y="880" width="400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-28" value="context.setEnviroment(enviroment);&lt;br&gt;postProcessApplicationContext(context); //注册beanNameGenrator&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;		&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;applyInitializers(context); // this.initializers.foreach initialize&lt;br&gt;&lt;/span&gt;listeners.contextPrepared(context); //传播Spring容器 perpared事件&lt;br&gt;...&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="49" y="910" width="351" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-29" value="&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="24.5" y="1070" width="405.5" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-30" value="refreshContext(context);" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="28" y="1080" width="282" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-31" value="context.registerShutdownHook(); //注册关闭钩子&lt;br&gt;refresh((ApplicationContext) context);&lt;br&gt;// 以SERVLET为例 refresh调用链&lt;br&gt;ServletWebServerApplicationContext.refresh() --&amp;gt;&lt;br&gt;AbstractApplicationContext.refresh()&lt;br&gt;接下来就进入了spring 容器的初始化环节&lt;br&gt;&lt;br&gt;在onRefresh() 里调用ServletWebServerApplicationContext.onRefresh()创建webServer&lt;br&gt;createWebServer();&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="49" y="1115" width="361" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-32" value="&lt;div style=&quot;&quot;&gt;afterRefresh(context, applicationArguments);//空方法 留给子类实现&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="28" y="1350" width="402" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-33" value="&lt;div style=&quot;&quot;&gt;stopWatch.stop();// 计时器停止 得到SrpingApplication 的启动完成时间&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;new StartupInfoLogger(this.mainApplicationClass).logStarted(getApplicationLog(), stopWatch); //打印启动完成日志&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="29" y="1440" width="402" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-56" value="&lt;div style=&quot;&quot;&gt;listeners.started(context); //在spring容器中传播 启动完成状态&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="31" y="1538" width="402" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-57" value="&lt;div style=&quot;&quot;&gt;callRunners(context, applicationArguments);&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;// 运行&amp;nbsp;ApplicationRunner&amp;nbsp;CommandLineRunner 子类&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="31" y="1630" width="402" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-58" value="&lt;div style=&quot;&quot;&gt;listeners.running(context); // 在spring容器中传播running 状态&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="31" y="1720" width="402" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="s4y_qQUdnjhd9skRipB7-4" target="s4y_qQUdnjhd9skRipB7-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-4" value="&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;spring.factories&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;# Application Context Initializers&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.context.ApplicationContextInitializer=\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.context.ContextIdApplicationContextInitializer,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.context.config.DelegatingApplicationContextInitializer,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.rsocket.context.RSocketPortInfoApplicationContextInitializer,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.web.context.ServerPortInfoApplicationContextInitializer&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="640" width="530" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="s4y_qQUdnjhd9skRipB7-7" target="s4y_qQUdnjhd9skRipB7-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="900" />
+              <mxPoint x="530" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-7" value="&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;spring.factories&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;# Application Listeners&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.context.ApplicationListener=\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.ClearCachesApplicationListener,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.builder.ParentContextCloserApplicationListener,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.cloud.CloudFoundryVcapEnvironmentPostProcessor,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.context.FileEncodingApplicationListener,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.context.config.AnsiOutputApplicationListener,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.context.config.ConfigFileApplicationListener,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.context.config.DelegatingApplicationListener,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.context.logging.ClasspathLoggingApplicationListener,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.context.logging.LoggingApplicationListener,\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="790" width="530" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="s4y_qQUdnjhd9skRipB7-17" target="s4y_qQUdnjhd9skRipB7-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s4y_qQUdnjhd9skRipB7-17" value="&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;spring.factories&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;# Run Listeners&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.SpringApplicationRunListener=\&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;org.springframework.boot.context.event.EventPublishingRunListener&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="570" y="1060" width="520" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
