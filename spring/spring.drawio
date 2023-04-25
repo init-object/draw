@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-25T14:20:37.825Z" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36" etag="AT5Xwf8qEhQBSXtGkb2c" version="21.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-25T14:23:32.513Z" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36" etag="DLdrcE2SPqM12g2MIAzp" version="21.2.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="922" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -111,13 +111,13 @@
         <mxCell id="s4y_qQUdnjhd9skRipB7-30" value="refreshContext(context);" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
           <mxGeometry x="28" y="1080" width="282" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="s4y_qQUdnjhd9skRipB7-31" value="context.registerShutdownHook(); //注册关闭钩子&lt;br&gt;refresh((ApplicationContext) context);&lt;br&gt;// 以SERVLET为例 refresh调用链&lt;br&gt;ServletWebServerApplicationContext.refresh() --&amp;gt;&lt;br&gt;AbstractApplicationContext.refresh()&lt;br&gt;接下来就进入了spring 容器的初始化环节&lt;br&gt;&lt;br&gt;在onRefresh() 里调用ServletWebServerApplicationContext.onRefresh()创建webServer&lt;br&gt;createWebServer();&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
-          <mxGeometry x="49" y="1115" width="361" height="145" as="geometry" />
+        <mxCell id="s4y_qQUdnjhd9skRipB7-31" value="context.registerShutdownHook(); //注册关闭钩子&lt;br&gt;refresh((ApplicationContext) context);&lt;br&gt;// 以SERVLET为例 refresh调用链&lt;br&gt;//ServletWebServerApplicationContext.refresh() --&amp;gt;&lt;br&gt;//&lt;b&gt;&lt;font color=&quot;#ff6666&quot;&gt;AbstractApplicationContext.refresh()&lt;/font&gt;&lt;/b&gt;&lt;br&gt;//接下来就进入了spring 容器的初始化环节&lt;br&gt;&lt;br&gt;//在onRefresh() 里调用ServletWebServerApplicationContext.onRefresh()创建webServer&lt;br&gt;&lt;b&gt;&lt;font color=&quot;#ff6666&quot;&gt;createWebServer();&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="43.5" y="1117.5" width="361" height="145" as="geometry" />
         </mxCell>
         <mxCell id="s4y_qQUdnjhd9skRipB7-32" value="&lt;div style=&quot;&quot;&gt;afterRefresh(context, applicationArguments);//空方法 留给子类实现&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
           <mxGeometry x="28" y="1350" width="402" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="s4y_qQUdnjhd9skRipB7-33" value="&lt;div style=&quot;&quot;&gt;stopWatch.stop();// 计时器停止 得到SrpingApplication 的启动完成时间&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;new StartupInfoLogger(this.mainApplicationClass).logStarted(getApplicationLog(), stopWatch); //打印启动完成日志&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+        <mxCell id="s4y_qQUdnjhd9skRipB7-33" value="&lt;div style=&quot;&quot;&gt;stopWatch.stop();// 计时器停止 得到SrpingApplication 的启动完成时间&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;new StartupInfoLogger(this.mainApplicationClass).logStarted(getApplicationLog(), stopWatch); //打印启动完成日志 即启动完成花费时间&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
           <mxGeometry x="29" y="1440" width="402" height="70" as="geometry" />
         </mxCell>
         <mxCell id="s4y_qQUdnjhd9skRipB7-56" value="&lt;div style=&quot;&quot;&gt;listeners.started(context); //在spring容器中传播 启动完成状态&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
