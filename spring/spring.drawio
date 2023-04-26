@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-26T03:42:56.279Z" agent="Test" etag="8AhJ84UAFUs3uJ_hM04d" version="21.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-26T03:49:34.455Z" agent="Test" etag="0fMzAJYc9VpaReJ5DEg1" version="21.2.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1434" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -55,7 +55,7 @@
           <mxGeometry x="10.25" y="35" width="299.75" height="85" as="geometry" />
         </mxCell>
         <mxCell id="s4y_qQUdnjhd9skRipB7-0" value="SpringApplication" style="swimlane;whiteSpace=wrap;html=1;align=left;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="40" y="800" width="460" height="2250" as="geometry" />
+          <mxGeometry x="70" y="810" width="460" height="2250" as="geometry" />
         </mxCell>
         <mxCell id="s4y_qQUdnjhd9skRipB7-11" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
           <mxGeometry x="6" y="50" width="444" height="290" as="geometry" />
@@ -93,7 +93,7 @@
         <mxCell id="s4y_qQUdnjhd9skRipB7-24" value="&lt;div style=&quot;&quot;&gt;// 打印Springboot Banner和imageBanner&lt;/div&gt;&lt;div style=&quot;&quot;&gt;//spring.banner.location 默认 banner.txt&lt;/div&gt;&lt;div style=&quot;&quot;&gt;//spring.banner.image.location 默认 banner.jpg|gif|png&lt;/div&gt;&lt;div style=&quot;&quot;&gt;Banner printedBanner = printBanner(environment);&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
           <mxGeometry x="22" y="720" width="409" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="s4y_qQUdnjhd9skRipB7-25" value="&lt;div style=&quot;&quot;&gt;// SERVLET :&amp;nbsp;AnnotationConfigServletWebServerApplicationContext&lt;/div&gt;&lt;div style=&quot;&quot;&gt;// REACTIVE:&amp;nbsp;AnnotationConfigReactiveWebServerApplicationContext&lt;/div&gt;&lt;div style=&quot;&quot;&gt;context = createApplicationContext()&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
+        <mxCell id="s4y_qQUdnjhd9skRipB7-25" value="&lt;div style=&quot;&quot;&gt;// SERVLET :&amp;nbsp;AnnotationConfigServletWebServerApplicationContext&lt;/div&gt;&lt;div style=&quot;&quot;&gt;// REACTIVE:&amp;nbsp;AnnotationConfigReactiveWebServerApplicationContext&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#ff6666&quot;&gt;&lt;b&gt;context = createApplicationContext()&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
           <mxGeometry x="24" y="790" width="409" height="60" as="geometry" />
         </mxCell>
         <mxCell id="s4y_qQUdnjhd9skRipB7-26" value="&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
@@ -106,13 +106,13 @@
           <mxGeometry x="49" y="910" width="351" height="100" as="geometry" />
         </mxCell>
         <mxCell id="s4y_qQUdnjhd9skRipB7-29" value="&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
-          <mxGeometry x="24.5" y="1070" width="405.5" height="240" as="geometry" />
+          <mxGeometry x="24.5" y="1050" width="405.5" height="240" as="geometry" />
         </mxCell>
         <mxCell id="s4y_qQUdnjhd9skRipB7-30" value="refreshContext(context);" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
-          <mxGeometry x="28" y="1080" width="282" height="30" as="geometry" />
+          <mxGeometry x="24.5" y="1050" width="282" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="s4y_qQUdnjhd9skRipB7-31" value="context.registerShutdownHook(); //注册关闭钩子&lt;br&gt;refresh((ApplicationContext) context);&lt;br&gt;// 以SERVLET为例 refresh调用链&lt;br&gt;//ServletWebServerApplicationContext.refresh() --&amp;gt;&lt;br&gt;//&lt;b&gt;&lt;font color=&quot;#ff6666&quot;&gt;AbstractApplicationContext.refresh()&lt;/font&gt;&lt;/b&gt;&lt;br&gt;//接下来就进入了spring 容器的初始化环节&lt;br&gt;&lt;br&gt;//在onRefresh() 里调用ServletWebServerApplicationContext.onRefresh()创建webServer&lt;br&gt;&lt;b&gt;&lt;font color=&quot;#ff6666&quot;&gt;createWebServer();&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
-          <mxGeometry x="43.5" y="1117.5" width="361" height="145" as="geometry" />
+        <mxCell id="s4y_qQUdnjhd9skRipB7-31" value="context.registerShutdownHook(); //注册关闭钩子" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
+          <mxGeometry x="39" y="1080" width="361" height="30" as="geometry" />
         </mxCell>
         <mxCell id="s4y_qQUdnjhd9skRipB7-32" value="&lt;div style=&quot;&quot;&gt;afterRefresh(context, applicationArguments);//空方法 留给子类实现&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
           <mxGeometry x="28" y="1350" width="402" height="70" as="geometry" />
@@ -128,6 +128,15 @@
         </mxCell>
         <mxCell id="s4y_qQUdnjhd9skRipB7-58" value="&lt;div style=&quot;&quot;&gt;listeners.running(context); // 在spring容器中传播running 状态&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="s4y_qQUdnjhd9skRipB7-0" vertex="1">
           <mxGeometry x="31" y="1720" width="402" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="YePzhmGo8jFMmE2zx9Ct-0" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="39" y="1120" width="371" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="YePzhmGo8jFMmE2zx9Ct-1" value="//在ServletWebServerApplicationContext.onRefresh() 里调用&lt;br&gt;&lt;b&gt;&lt;font color=&quot;#ff6666&quot;&gt;createWebServer(); //&lt;/font&gt;&lt;/b&gt;创建webServer" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="48.5" y="1200" width="351.5" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="YePzhmGo8jFMmE2zx9Ct-2" value="refresh((ApplicationContext) context);&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;// 以SERVLET为例 refresh调用链&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;//ServletWebServerApplicationContext.refresh() --&amp;gt;&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;//&lt;/span&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font style=&quot;border-color: var(--border-color);&quot; color=&quot;#ff6666&quot;&gt;AbstractApplicationContext.refresh()&lt;/font&gt;&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;//接下来就进入了spring 容器的初始化环节&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="s4y_qQUdnjhd9skRipB7-0">
+          <mxGeometry x="39" y="1140" width="318" height="30" as="geometry" />
         </mxCell>
         <mxCell id="s4y_qQUdnjhd9skRipB7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="s4y_qQUdnjhd9skRipB7-4" target="s4y_qQUdnjhd9skRipB7-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
